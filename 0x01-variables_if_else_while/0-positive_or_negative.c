@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
- * main - if else statement
+/**
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
@@ -22,7 +22,7 @@ int main(void)
 	{
 		printf("%u is zero\n", n);
 	}
-	else if (n > 0)
+	else
 	{
 		printf("%u is positive\n", n);
 	}
