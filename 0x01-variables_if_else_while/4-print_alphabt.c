@@ -8,23 +8,21 @@
 int main(void)
 {
 	char a = 'a';
-	char b = 'f';
-	char c = 'r';
-	while (a <= 'd')
+
+	while (a <= 'z')
 	{
+		if (a == 'e' || a == 'q')
+		{
+			a++;
+			continue;
+		}
+		else
+		{
 		putchar(a);
 		a++;
+		}
 	}
-	while (b <= 'p')
-	{
-		putchar(b);
-		b++;
-	}
-	while (c <= 'z')
-	{
-		putchar(c);
-		c++;
-	}
+
 	putchar('\n');
 	return (0);
 }
