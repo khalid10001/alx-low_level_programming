@@ -9,9 +9,9 @@ int main(void)
 {
 	int x, y;
 
-	for (x = 0; x < 100; x++)
+	for (x = 0; x <= 99; x++)
 	{
-		for (y = 0; y < 100; y++)
+		for (y = 0; y <= 99; y++)
 		{
 			if (x < y)
 			{
@@ -20,7 +20,7 @@ int main(void)
 				putchar(' ');
 				putchar((y / 10) + 48);
 				putchar((y % 10) + 48);
-				if (x != 99 || y != 100)
+				if (x != 98 || y != 99)
 				{
 					putchar(',');
 					putchar(' ');
