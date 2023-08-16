@@ -15,6 +15,7 @@ int main(void)
 		{
 			s = s + n;
 		}
-		printf("%d\n", s);
 	}
+	printf("%d\n", s);
+	return (0);
 }
