@@ -1,8 +1,8 @@
 #include"main.h"
 
 /**
- * numLength - returns the length of string
- * @n: operand number
+ * numLength - returns the length number of the word
+ * @n: number
  * Return: number of digits
 */
 int numLength(int n)
@@ -23,39 +23,40 @@ int numLength(int n)
 
 /**
  * main - Entry point
+ *
  * Description: prints the first 98 Fibonacci numbers
- *	starting with 1 and 2 followed by a new line
+ *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	int count, init;
-	unsigned long f1 = 1, f2 = 2, sum;
-	unsigned long max = 100000000, f1o = 0, f2o = 0, sumo = 0;
+	int i, init;
+	unsigned long x1 = 1, x2 = 2, s;
+	unsigned long max = 100000000, y1 = 0, y2 = 0, s1 = 0;
 
-	for (count = 1; count <= 98; count++)
+	for (i = 1; i <= 98; i++)
 	{
-		if (f1o > 0)
-			printf("%lu", f1o);
-		init = numLength(max) - 1 - numLength(f1);
+		if (y1 > 0)
+			printf("%lu", y1);
+		init = numLength(max) - 1 - numLength(x1);
 
-		while (f1o > 0 && init > 0)
+		while (y1 > 0 && init > 0)
 		{
 			printf("%d", 0);
 			--init;
 		}
 
-		printf("%lu", f1);
+		printf("%lu", x1);
 
-		sum = (f1 + f2) % max;
-		sumo = f1o + f2o + (f1 + f2) / max;
-		f1 = f2;
-		f1o = f2o;
-		f2 = sum;
-		f2o = sumo;
+		s = (x1 + x2) % max;
+		s1 = y1 + y2 + (x1 + x2) / max;
+		x1 = x2;
+		y1 = y2;
+		x2 = s;
+		y2 = s1;
 
-		if (count != 98)
+		if (i != 98)
 			printf(", ");
 		else
 			printf("\n");
