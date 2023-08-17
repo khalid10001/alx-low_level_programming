@@ -6,7 +6,7 @@
  * @a: int character
  * @b: int character
  *
- * Return: 0.
+ * Return: returns the multiple between a and b
  */
 int mul(int a, int b)
 {
