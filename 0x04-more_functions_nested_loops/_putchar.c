@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -6,7 +7,7 @@
  * @c: print character variable
  * Return: 0
  */
-char _putchar(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
