@@ -7,19 +7,22 @@
  */
 void print_triangle(int size)
 {
-	int x, y, z;
+	int x, y;
 
 	if (size > 0)
 	{
-		for (x = 1; x <= size; x++)
+		for (y = 1; y <= size; y++)
 		{
-			for (y = 1; y <= (size - x); y++)
+			for (x = 1; x <= size; x++)
 			{
+				if ((x + y) <= size)
+				{
 				_putchar(' ');
-			}
-			for (z = 1; z <= x; z++)
-			{
+				}
+				else
+				{
 				_putchar(35);
+				}
 			}
 			_putchar('\n');
 		}
