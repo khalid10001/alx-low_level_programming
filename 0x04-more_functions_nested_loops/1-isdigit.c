@@ -5,7 +5,7 @@
  *
  * @c: printing character
  *
- * Return: 0.
+ * Return: if its digit from 0 through 9 returns 1 otherwise 0
  */
 int _isdigit(int c)
 {
