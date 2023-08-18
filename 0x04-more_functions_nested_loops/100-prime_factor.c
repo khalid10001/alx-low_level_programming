@@ -9,7 +9,7 @@ int main(void)
 {
 	unsigned int i;
 	unsigned long n = 612852475143;
-	
+
 	for (i = 2; i <= n; i++)
 	{
 		if (n % i == 0)
@@ -19,5 +19,5 @@ int main(void)
 		}
 	}
 	printf("%d\n", i);
-	return(0);
+	return (0);
 }
