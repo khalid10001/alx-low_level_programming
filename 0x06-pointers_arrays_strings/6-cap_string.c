@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * islower - a functinction with lowercase
+ * is_lower - a functinction with lowercase
  * @c: chracter variable
- * Return = @c;
+ * Return: @c;
  */
 int is_lower(char c)
 {
@@ -34,7 +34,7 @@ int is_separator(char c)
 /**
  * cap_string - a function that capitalizes all words of a string
  * @str: pointer variable change the words to capital
- * Return: @str
+ * Return: ptr
  */
 char *cap_string(char *str)
 {
