@@ -6,12 +6,12 @@
  */
 void print_number(int n)
 {
-	int m = n;
+	unsigned int m = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -m;
+		m = -n;
 	}
 	if (m / 10 != 0)
 	{
