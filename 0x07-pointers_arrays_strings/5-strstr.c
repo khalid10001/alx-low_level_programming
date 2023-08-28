@@ -4,7 +4,7 @@
  * _strstr - a function that locates a substring
  * @haystack: pointer character variable
  * @needle: pointer character variable
- * Return: 0.
+ * Return: null
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -21,5 +21,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		i++;
 	}
-	return (0);
+	return ('\0');
 }
