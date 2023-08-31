@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * is_palindrome - a function that returns 1 if a string
@@ -12,12 +13,7 @@
 int palindrome(char *s, int i, int j);
 int is_palindrome(char *s)
 {
-	int len = 0;
-
-	while (s[len] != '\0')
-	{
-		len++;
-	}
+	int len = strlen(s);
 	return (palindrome(s, 0, len - 1));
 }
 
