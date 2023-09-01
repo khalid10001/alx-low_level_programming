@@ -5,7 +5,7 @@
  * main -  a program that multiplies two numbers
  * @argc: integer variable
  * @argv: pointer character variable with array
- * Return: 0.
+ * Return: if its error returns 1 otherwise 0
  */
 int main(int argc, char *argv[])
 {
@@ -23,6 +23,6 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 }
