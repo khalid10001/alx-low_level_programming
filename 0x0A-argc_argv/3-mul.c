@@ -11,18 +11,18 @@ int main(int argc, char *argv[])
 {
 	int i, s = 1;
 
-	if (argc > 1)
+	if (argc != 1)
 	{
-	for (i = 1; i < argc; i++)
-	{
-		s *= atoi(argv[i]);
-	}
-	printf("%d\n", s);
+		for (i = 1; i < argc; i++)
+		{
+			s *= atoi(argv[i]);
+		}
+		printf("%d\n", s);
+		return (0);
 	}
 	else
 	{
 		printf("Error\n");
-		return (1);
+		return (0);
 	}
-	return (0);
 }
