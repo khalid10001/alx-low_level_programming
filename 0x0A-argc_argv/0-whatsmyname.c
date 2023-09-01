@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - a program that prints its name
+ * @argc: integer variable
+ * @argv: pointer character variable with array
+ * Return: 0.
+ */
 int main(int argc, char *argv[])
 {
 	int i;
