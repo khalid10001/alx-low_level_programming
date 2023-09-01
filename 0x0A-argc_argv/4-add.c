@@ -28,11 +28,6 @@ int main(int argc, char *argv[])
 		printf("%d\n", s);
 		return (0);
 	}
-	else if (argc < 1)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	else
 	{
 		printf("0\n");
