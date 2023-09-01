@@ -9,28 +9,23 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, s = 0;
+	int s = 0;
+	char *c;
 
-	if (argc > 1)
+	while (--argc)
 	{
-		for (i = 1; i < argc; i++)
+		c = argv[argc];
+		while (*c)
 		{
-			if (atoi(argv[i]) <= 0)
+			if (*c < 48 || *c > 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
-			{
-			s += atoi(argv[i]);
-			}
+			c++;
 		}
-		printf("%d\n", s);
-		return (0);
+		s += atoi(argv[argc]);
 	}
-	else
-	{
-		printf("0\n");
-		return (0);
-	}
+	printf("%d\n", s);
+	return (0);
 }
