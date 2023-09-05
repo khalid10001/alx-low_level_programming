@@ -4,7 +4,8 @@
  * str_concat - a function that concatenates two strings.
  * @s1: character variable
  * @s2: character variable
- * Return: null
+ * Return: if s1, s2 and p is 0 returns null
+ *	otherwise the pointer of s1, s2 which is p
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -44,5 +45,6 @@ char *str_concat(char *s1, char *s2)
 			p[i] = s2[i - size1];
 		}
 	}
+	p[i] = '\0';
 	return (p);
 }
