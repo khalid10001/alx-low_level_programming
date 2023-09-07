@@ -14,13 +14,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int sz1 = 0, sz2 = 0, x = 0, y = 0;
 	char *concat;
 
-	if (s1 == 0 || s2 == 0)
+	if (s1 == 0)
 	{
-		s1 = "\0";
+		s1 = "";
 	}
 	if (s2 == 0)
 	{
-		s2 = "\0";
+		s2 = "";
 	}
 	while (s1[sz1] != '\0')
 	{
