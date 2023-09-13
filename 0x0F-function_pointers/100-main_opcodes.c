@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
+ * main -  prints the opcodes of its own main function
  * @argc: argument number.
  * @argv: argument vector.
  * Return: 0.
@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	char *p = (char *) main;
-	int bytes;
+	int bytes, i = 0;
 
 	if (argc != 2)
 	{
@@ -26,9 +26,18 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while (bytes--)
+	while (i < bytes)
 	{
-		printf("%02hhx%s", *p++, bytes ? " " : "\n");
+		if (i != bytes - 1)
+		{
+			printf("%02hhx ", p[i]);
+		}
+		else
+		{
+			printf("%02hhx\n", p[i]);
+			break;
+		}
+		i++;
 	}
 	return (0);
 }
