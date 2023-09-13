@@ -26,13 +26,9 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while (bytes != '\0')
+	while (bytes--)
 	{
-		printf("%02hhx", *p++);
-		printf(" ");
-		bytes--;
+		printf("%02hhx%s", *p++, bytes ? " " : "\n");
 	}
-
-	printf("\n");
 	return (0);
 }
