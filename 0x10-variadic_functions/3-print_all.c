@@ -48,7 +48,8 @@ void f_string(char *separator, va_list arg)
 	s = va_arg(arg, char *);
 	if (s == NULL)
 	{
-		printf("(nil)");
+		s = "(nil)";
+
 	}
 	printf("%s%s", separator, s);
 }
