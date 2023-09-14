@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 {
 
 	va_list arg;
-	unsigned int i = 0, j;
+	int i = 0, j;
 	char *separator = "";
 
 	fm fms[] = {
