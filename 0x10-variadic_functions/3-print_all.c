@@ -71,6 +71,7 @@ void print_all(const char * const format, ...)
 		{"i", f_int},
 		{"f", f_float},
 		{"s", f_string},
+		{NULL, NULL}
 		};
 
 	va_start(arg, format);
@@ -78,7 +79,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (j < 4)
+		while (fms[j].p)
 		{
 			if (fms[j].p[0] == format[i])
 			{
