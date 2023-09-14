@@ -70,11 +70,10 @@ void print_all(const char * const format, ...)
 		{"c", f_char},
 		{"i", f_int},
 		{"f", f_float},
-		{"s", f_string},
+		{"s", f_string}
 		};
 
 	va_start(arg, format);
-
 	while (format && format[i])
 	{
 		j = 0;
@@ -84,7 +83,6 @@ void print_all(const char * const format, ...)
 			{
 				fms[j].f(separator, arg);
 				separator = ", ";
-				break;
 			}
 			j++;
 		}
