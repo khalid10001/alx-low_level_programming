@@ -49,7 +49,6 @@ void f_string(char *separator, va_list arg)
 	if (s == NULL)
 	{
 		printf("(nil)");
-		return;
 	}
 	printf("%s%s", separator, s);
 }
