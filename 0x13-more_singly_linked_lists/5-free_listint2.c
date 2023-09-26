@@ -17,8 +17,7 @@ void free_listint2(listint_t **head)
 	nd = *head;
 	if (nd != NULL)
 	{
-		temp = nd;
-		nd = (*nd).next;
+		temp = nd->next;
 		free(temp);
 	}
 	*head = NULL;
