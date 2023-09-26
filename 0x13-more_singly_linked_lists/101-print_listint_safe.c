@@ -7,26 +7,24 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *nd;
-	const listint_t *lp_nd;
-	size_t x = 0;
+	size_t x, y;
+	const listint_t *nd = head, *tmp;
 
-	nd = head;
-	while (nd != NULL)
+	for (x = 0; nd != NULL; x++)
 	{
-		if (x > 0 && nd == lp_nd)
-		{
-			printf("-> [%p] %d\n", (void *)nd, nd->n);
-			break;
-		}
-
 		printf("[%p] %d\n", (void *)nd, nd->n);
-		x++;
-
-		if (nd->next >= nd)
-		lp_nd = nd->next;
-
 		nd = nd->next;
+		tmp = head;
+
+		for (y = 0; y < x; y++)
+		{
+			if (nd == tmp)
+			{
+				printf("-> [%p] %d\n", (void *)nd, nd->n);
+				return (x);
+			}
+			tmp = tmp->next;
+		}
 	}
 	return (x);
 }
