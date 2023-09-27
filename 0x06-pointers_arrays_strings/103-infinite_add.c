@@ -36,6 +36,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			m = 0;
 		r[z] = (n + m + carry) % 10 - '0';
 		carry = (n + m + carry) / 10;
+		z--;
 	}
 	if (carry == 1)
 	{
