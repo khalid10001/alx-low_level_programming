@@ -20,6 +20,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		b = x;
 	else
 		b = y;
+	if (b + 1 > size_r)
+		return (0);
 	r[b] = '\0';
 	z = b - 1;
 	while (z >= 0)
