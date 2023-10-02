@@ -26,9 +26,14 @@ int main(int argc, char *argv[])
 	to_f = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_f == -1)
 		dprintf(STDERR_FILENO, ERR_WRITE, argv[2]), exit(99);
+
 	while ((b = read(from_f, buffer, READ_BUF_SIZE)) > 0)
+	{
 		if (write(to_f, buffer, b) != b)
+		{
 			dprintf(STDERR_FILENO, ERR_WRITE, argv[2]), exit(99);
+		}
+	}
 	if (b == -1)
 		dprintf(STDERR_FILENO, ERR_READ, argv[1]), exit(98);
 	from_f = close(from_f);
