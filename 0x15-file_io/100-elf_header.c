@@ -34,7 +34,7 @@ void print_magic(Elf64_Ehdr head)
 void print_class(Elf64_Ehdr head)
 {
 	printf("  Class:                             ");
-	
+
 	switch (head.e_ident[EI_CLASS])
 	{
 	case ELFCLASSNONE:
