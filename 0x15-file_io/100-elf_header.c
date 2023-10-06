@@ -13,7 +13,7 @@ void print_magic(Elf64_Ehdr head)
 	printf("  Magic:   ");
 		while (x < EI_NIDENT)
 	{
-		printf("%02x", head.e_ident[x]);
+		printf("%2.2x", head.e_ident[x]);
 		if (x == EI_NIDENT - 1)
 		{
 			printf("\n");
@@ -70,7 +70,7 @@ void print_data(Elf64_Ehdr head)
 	}
 	else
 	{
-		printf("<unknown: %x>", head.e_ident[EI_CLASS]);
+		printf("<unknown: %x>", head.e_ident[EI_OSABI]);
 	}
 }
 
@@ -87,10 +87,13 @@ void print_version(Elf64_Ehdr head)
 	{
 	case EV_CURRENT:
 		printf(" (current)\n");
-		break;
+	break;
+	case EV_NONE:
+		printf("%s", "");
+	break;
 	default:
 		printf("\n");
-		break;
+	break;
 	}
 }
 
@@ -179,7 +182,7 @@ void print_type(Elf64_Ehdr head)
 		printf("CORE (Core file)\n");
 		break;
 	default:
-		printf("<unknown: %x>", ptr[x]);
+		printf("<unknown: %x", ptr[x]);
 	}
 }
 
