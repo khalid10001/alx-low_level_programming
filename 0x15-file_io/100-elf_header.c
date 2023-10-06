@@ -70,7 +70,7 @@ void print_data(Elf64_Ehdr head)
 	}
 	else
 	{
-		printf("<unknown: %x>\n", head.e_ident[EI_CLASS]);
+		printf("<unknown: %x>", head.e_ident[EI_CLASS]);
 	}
 }
 
@@ -135,7 +135,7 @@ void print_osabi(Elf64_Ehdr head)
 		printf("ARM\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", head.e_ident[EI_OSABI]);
+		printf("<unknown: %x>", head.e_ident[EI_OSABI]);
 	}
 }
 
@@ -179,7 +179,7 @@ void print_type(Elf64_Ehdr head)
 		printf("CORE (Core file)\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", ptr[x]);
+		printf("<unknown: %x>", ptr[x]);
 	}
 }
 
