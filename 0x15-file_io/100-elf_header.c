@@ -34,17 +34,20 @@ void print_magic(Elf64_Ehdr head)
 void print_class(Elf64_Ehdr head)
 {
 	printf("  Class:                             ");
-	if (head.e_ident[EI_CLASS] == ELFCLASSNONE)
+	
+	switch (head.e_ident[EI_CLASS])
 	{
+	case ELFCLASSNONE:
 		printf("none\n");
-	}
-	else if (head.e_ident[EI_CLASS] == ELFCLASS32)
-	{
+		break;
+	case ELFCLASS32:
 		printf("ELF32\n");
-	}
-	else if (head.e_ident[EI_CLASS] == ELFCLASS64)
-	{
+		break;
+	case ELFCLASS64:
 		printf("ELF64\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", head.e_ident[EI_CLASS]);
 	}
 }
 
@@ -56,21 +59,19 @@ void print_data(Elf64_Ehdr head)
 {
 	printf("  Data:                              ");
 
-	if (head.e_ident[EI_DATA] == ELFDATANONE)
+	switch (head.e_ident[EI_DATA])
 	{
+	case ELFDATANONE:
 		printf("none\n");
-	}
-	else if (head.e_ident[EI_DATA] == ELFDATA2LSB)
-	{
+		break;
+	case ELFDATA2LSB:
 		printf("2's complement, little endian\n");
-	}
-	else if (head.e_ident[EI_DATA] == ELFDATA2MSB)
-	{
+		break;
+	case ELFDATA2MSB:
 		printf("2's complement, big endian\n");
-	}
-	else
-	{
-		printf("<unknown: %x>", head.e_ident[EI_OSABI]);
+		break;
+	default:
+		printf("<unknown: %x>\n", head.e_ident[EI_CLASS]);
 	}
 }
 
@@ -138,7 +139,7 @@ void print_osabi(Elf64_Ehdr head)
 		printf("ARM\n");
 		break;
 	default:
-		printf("<unknown: %x>", head.e_ident[EI_OSABI]);
+		printf("<unknown: %x>\n", head.e_ident[EI_OSABI]);
 	}
 }
 
@@ -182,7 +183,7 @@ void print_type(Elf64_Ehdr head)
 		printf("CORE (Core file)\n");
 		break;
 	default:
-		printf("<unknown: %x", ptr[x]);
+		printf("<unknown: %x>\n", ptr[x]);
 	}
 }
 
