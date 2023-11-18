@@ -12,8 +12,8 @@
 
 typedef struct format
 {
-        char *p;
-        void (*f)(char *, va_list);
+	char *p;
+	void (*f)(char *, va_list);
 } fm;
 
 int sum_them_all(const unsigned int n, ...);
